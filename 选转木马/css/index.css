@@ -1,0 +1,42 @@
+*{
+  margin: 0;
+  padding: 0px;
+}
+li{
+  list-style: none;
+}
+img{
+  border: 0;
+  vertical-align: top;
+}
+
+.bigBox{
+  width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+.box{
+  height: 700px;
+  overflow: hidden;
+  position: relative;
+}
+.box li{
+  position: absolute;
+  left: 200px;
+  top:0px;
+  transition:all .5s;
+}
+.box li img{
+  width: 100%;
+}
+.prev, .next{
+  width: 76px;
+  height: 112px;
+  position: absolute;
+  top: 50%;
+  margin-top: -56px;
+  z-index: 99; 
+}
+.next{
+  right: 0;
+}

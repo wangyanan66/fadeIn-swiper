@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>旋转木马my</title>
+  <link rel="stylesheet" href="选转木马/css/index.css">
+  <style>
+    .box .box1{
+      width: 200px;
+      top: 20px;
+      left:50px;
+      opacity: .2;
+      z-index: 2;
+    }
+    .box .box2{
+      width: 400px;
+      top: 70px;
+      left:0px;
+      opacity: .8;
+      z-index: 3;
+    }
+    .box .box3{
+      width: 600px;
+      top: 100px;
+      left:100px;
+      opacity: 1;
+      z-index: 4;
+    }
+    .box .box4{
+      width: 400px;
+      top: 70px;
+      left:400px;
+      opacity: .8;
+      z-index: 3;
+    }
+    .box .box5{
+      width: 200px;
+      top: 20px;
+      left:450px;
+      opacity: .2;
+      z-index: 1;
+    }
+  
+  </style>
+</head>
+<body>
+  <div class="bigBox">
+    <div class="box">
+      <ul>
+        <li class="box1"><img src="img/psb0.jpg" alt=""></li>
+        <li class="box2"><img src="img/psb1.jpg" alt=""></li>
+        <li class="box3"><img src="img/psb2.jpg" alt=""></li>
+        <li class="box4"><img src="img/psb3.jpg" alt=""></li>
+        <li class="box5"><img src="img/psb4.jpg" alt=""></li>
+      </ul>
+    </div>
+    <div class="prev"><img src="img/prev.png" alt=""></div>
+    <div class="next"><img src="img/next.png" alt=""></div>
+  </div>
+  <script src="选转木马/lib/jquery-1.12.4.js"></script>
+  <script src="选转木马/js/jquery.rotate.js"></script>
+  <script>  
+    $.rotate({
+      classesName : ['box1','box2','box3','box4','box5'],
+      leftButton : '.prev',
+      rightButton : '.next',
+      event : 'click',
+      objectBox : '.bigBox .box li'
+    })
+  </script>
+</body>
+</html>
